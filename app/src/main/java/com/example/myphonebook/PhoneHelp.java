@@ -10,7 +10,7 @@ public class PhoneHelp {
     private DatabaseReference databaseReference;
 
     public PhoneHelp(DatabaseReference databaseReference) {
-        //this.databaseReference = databaseReference;
+
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(Phone.class.getSimpleName());
     }
@@ -18,6 +18,7 @@ public class PhoneHelp {
     public PhoneHelp() {
 
     }
+
 
     public  Task<Void> add(Phone phone){
         return databaseReference.push().setValue(phone);

@@ -23,15 +23,15 @@ public class home extends AppCompatActivity {
 
         final EditText name = findViewById(R.id.names);
         final EditText mobile = findViewById(R.id.mobiles);
-        Button btn = findViewById(R.id.addct);
+        Button cbtn = findViewById(R.id.addct);
         Button show = findViewById(R.id.showct);
         logout = findViewById(R.id.logoutbtn);
         PhoneHelp help = new PhoneHelp();
 
-        btn.setOnClickListener(v->
+        cbtn.setOnClickListener(v->
         {
             Phone phone = new Phone(name.getText().toString(),mobile.getText().toString());
-            //Phone contact = new Phone(name.getText().toString(),mobile.getText().toString());
+
             help.add(phone).addOnSuccessListener(suc->
                     {
                         Toast.makeText(this,"Contact is Added",Toast.LENGTH_SHORT).show();

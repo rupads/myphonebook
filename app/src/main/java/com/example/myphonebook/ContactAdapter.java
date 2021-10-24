@@ -15,8 +15,8 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public ContactAdapter(Context ctx){
         this.context = ctx;
     }
-    public void setItems(ArrayList<Phone> phones){
-        list.addAll(phones);
+    public void setItems(ArrayList<Phone> phone){
+        list.addAll(phone);
     }
 
 
@@ -31,9 +31,9 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(@NonNull  RecyclerView.ViewHolder holder, int position)
     {
        PhoneNew vh = (PhoneNew) holder;
-        Phone contact = list.get(position);
-        vh.t_name.setText(contact.getName());
-        vh.t_mobile.setText(contact.getMobile());
+        Phone phone = list.get(position);
+        vh.t_name.setText(phone.getName());
+        vh.t_mobile.setText(phone.getMobile());
     }
 
     @Override
